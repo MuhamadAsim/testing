@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Professional LLM Chat Application Design System */
+
+@layer base {
+  :root {
+    /* Core Theme Colors */
+    --background: 240 10% 98%;
+    --foreground: 220 15% 15%;
+
+    /* Card & Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+    --surface: 240 8% 97%;
+
+    /* Interactive Elements */
+    --primary: 220 95% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 220 95% 50%;
+    --primary-glow: 220 95% 65%;
+
+    --secondary: 240 6% 92%;
+    --secondary-foreground: 220 15% 25%;
+    --secondary-hover: 240 6% 88%;
+
+    /* Accent Colors */
+    --accent: 260 85% 60%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 260 85% 55%;
+
+    /* Success & Status Colors */
+    --success: 150 65% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 35 85% 55%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Text & UI Elements */
+    --muted: 240 6% 92%;
+    --muted-foreground: 220 10% 45%;
+    --border: 240 6% 90%;
+    --input: 240 6% 94%;
+    --ring: 220 95% 55%;
+
+    /* Chat Specific */
+    --chat-user: 220 95% 55%;
+    --chat-assistant: 240 6% 96%;
+    --chat-system: 150 45% 95%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220, 95%, 55%), hsl(260, 85%, 60%));
+    --gradient-secondary: linear-gradient(135deg, hsl(240, 6%, 97%), hsl(240, 8%, 94%));
+    --gradient-hero: linear-gradient(135deg, hsl(220, 95%, 55%) 0%, hsl(260, 85%, 60%) 50%, hsl(280, 90%, 65%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(240, 8%, 98%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(220, 95%, 55%, 0.1);
+    --shadow-medium: 0 8px 30px -8px hsl(220, 95%, 55%, 0.15);
+    --shadow-strong: 0 12px 40px -12px hsl(220, 95%, 55%, 0.2);
+    --shadow-glow: 0 0 30px hsl(220, 95%, 65%, 0.3);
+
+    /* Animation & Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Theme Colors */
+    --background: 220 15% 8%;
+    --foreground: 240 10% 95%;
+
+    /* Dark Card & Surface Colors */
+    --card: 220 15% 10%;
+    --card-foreground: 240 10% 95%;
+    --surface: 220 15% 12%;
+
+    /* Dark Interactive Elements */
+    --primary: 220 95% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 220 95% 65%;
+    --primary-glow: 220 95% 70%;
+
+    --secondary: 220 10% 18%;
+    --secondary-foreground: 240 10% 85%;
+    --secondary-hover: 220 10% 22%;
+
+    /* Dark Accent Colors */
+    --accent: 260 85% 65%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 260 85% 70%;
+
+    /* Dark Status Colors */
+    --success: 150 65% 50%;
+    --success-foreground: 0 0% 100%;
+    --warning: 35 85% 60%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Dark Text & UI */
+    --muted: 220 10% 18%;
+    --muted-foreground: 220 10% 65%;
+    --border: 220 10% 20%;
+    --input: 220 10% 16%;
+    --ring: 220 95% 60%;
+
+    /* Dark Chat Colors */
+    --chat-user: 220 95% 60%;
+    --chat-assistant: 220 10% 15%;
+    --chat-system: 150 45% 15%;
+
+    /* Dark Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220, 95%, 60%), hsl(260, 85%, 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(220, 10%, 12%), hsl(220, 15%, 16%));
+    --gradient-hero: linear-gradient(135deg, hsl(220, 95%, 60%) 0%, hsl(260, 85%, 65%) 50%, hsl(280, 90%, 70%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220, 15%, 10%) 0%, hsl(220, 10%, 14%) 100%);
+
+    /* Dark Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(0, 0%, 0%, 0.3);
+    --shadow-medium: 0 8px 30px -8px hsl(0, 0%, 0%, 0.4);
+    --shadow-strong: 0 12px 40px -12px hsl(0, 0%, 0%, 0.5);
+    --shadow-glow: 0 0 30px hsl(220, 95%, 70%, 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .shadow-strong {
+    box-shadow: var(--shadow-strong);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+  
+  .chat-bubble-user {
+    background: hsl(var(--chat-user));
+    color: hsl(var(--primary-foreground));
+  }
+  
+  .chat-bubble-assistant {
+    background: hsl(var(--chat-assistant));
+    color: hsl(var(--foreground));
+  }
+  
+  .surface {
+    background: hsl(var(--surface));
+  }
+}
